@@ -5,9 +5,10 @@ Note that prometheus is polling API which is not part of this repository.
 
 ### Verifing setup works with Prometheus graph explorer
 1. Run `api` and `website`
-2. Navigate to `http://localhost:19090/` (prometheus graph explorer) and lookup for `http_request_total` metric count
-3. Perform some actions on the website
-4. Check the `http_request_total` metric again and verify the count goes up.
+2. Run this setup with `docker-compose up -d`
+3. Navigate to `http://localhost:19090/` (prometheus graph explorer) and lookup for `http_request_total` metric count
+4. Perform some actions on the website
+5. Check the `http_request_total` metric again and verify the count goes up.
 
 ### Grafana
 In Grafana a test dashboard for the same `http_request_total` metric is added and saved into a file. Explore `Test dashboard`
