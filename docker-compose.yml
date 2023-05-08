@@ -27,9 +27,10 @@ services:
       - GF_LOG_MODE=console
       - GF_LOG_LEVEL=critical
     volumes:
-      # - ./config/grafana-provisioning-dashboards.yaml:/etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml:ro
+      # Datasources provisioning
       - ./config/grafana-provisioning-datasources.yaml:/etc/grafana/provisioning/datasources/provisioning-datasources.yaml:ro
-      # setup at least one dashboard (copy from staging?)
-      # - ../../../../../operations/mimir-mixin-compiled/dashboards/mimir-alertmanager.json:/var/lib/grafana/dashboards/mimir-alertmanager.json:ro
+      # Dashboards provisioning
+      - ./config/grafana-provisioning-dashboards.yaml:/etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml:ro
+      - ./dashboards/test-dashboard.json:/var/lib/grafana/dashboards/test-dashboard.json:ro
     ports:
       - 9000:3000

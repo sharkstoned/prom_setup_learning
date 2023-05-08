@@ -8,3 +8,6 @@ Note that prometheus is polling API which is not part of this repository.
 2. Navigate to `http://localhost:19090/` (prometheus graph explorer) and lookup for `http_request_total` metric count
 3. Perform some actions on the website
 4. Check the `http_request_total` metric again and verify the count goes up.
+
+### Grafana
+In Grafana a test dashboard for the same `http_request_total` metric is added and saved into a file. Explore `Test dashboard`
