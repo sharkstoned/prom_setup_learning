@@ -31,6 +31,6 @@ services:
       - ./config/grafana-provisioning-datasources.yaml:/etc/grafana/provisioning/datasources/provisioning-datasources.yaml:ro
       # Dashboards provisioning
       - ./config/grafana-provisioning-dashboards.yaml:/etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml:ro
-      - ./dashboards/test-dashboard.json:/var/lib/grafana/dashboards/test-dashboard.json:ro
+      - ./dashboards:/var/lib/grafana/dashboards:ro
     ports:
       - 9000:3000

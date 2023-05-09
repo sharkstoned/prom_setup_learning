@@ -13,6 +13,11 @@ scrape_configs:
     static_configs:
       # we are going over a bridge to the host network
       # Prometheus checks out the "/metrics" route
+      # http schema by default
       - targets: [ '172.17.0.1:3001' ]
         labels:
           app: 'api'
+
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
