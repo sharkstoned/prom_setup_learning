@@ -12,3 +12,6 @@ Note that prometheus is polling API which is not part of this repository.
 
 ### Grafana
 In Grafana a test dashboard for the same `http_request_total` metric is added and saved into a file. Explore `Test dashboard`
+
+### Node exporter
+Node exporter allows collecting Linux metrics. For the purpose of this demo we run node exporter right on the host machine. Make sure the node exporter executable is placed under the `bin/` directory.
