@@ -3,3 +3,6 @@ up:
 
 down:
 	./scripts/down.sh
+
+clean_logs:
+	rm logs/*
