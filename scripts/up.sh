@@ -18,4 +18,5 @@ fi
 # TODO: Run API?
 TIMESTAMP=$(date "+%s")
 nohup ./bin/node_exporter --web.listen-address=:19100 > logs/node_exporter_$TIMESTAMP.log 2>&1 & echo $! > node_exporter.pid
+echo Node exporter is running on host machine
 docker-compose up -d
