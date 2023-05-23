@@ -33,4 +33,10 @@ services:
       - ./config/grafana-provisioning-dashboards.yaml:/etc/grafana/provisioning/dashboards/provisioning-dashboards.yaml:ro
       - ./dashboards:/var/lib/grafana/dashboards:ro
     ports:
-      - 9000:3000
+      - 19000:3000
+
+  # TODO: finish alertmanager setup: https://github.com/prometheus/alertmanager#configuration
+  # alertmanager:
+  #   image: quay.io/prometheus/alertmanager
+  #   ports:
+  #     - 19093:9093
