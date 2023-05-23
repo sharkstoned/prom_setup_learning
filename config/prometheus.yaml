@@ -25,3 +25,8 @@ scrape_configs:
   - job_name: "node_exporter"
     static_configs:
       - targets: [ '172.17.0.1:19100' ]
+
+  # - job_name: 'discovered_node'
+  #   dns_sd_configs:
+  #     - names:
+  #         - '_demo-node._tcp.prometheus.io'
